@@ -1,0 +1,306 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %} 
+
+{% block content %}
+       
+                <div class="form">
+                  <div class="text-title">
+                    <h1>Get Started!</h1>
+                  </div>
+                  </br>
+
+                  <div class="text-login">
+                    <a href="{% url 'login' %}">Already have an account? Log in</a>
+                  </div>
+
+                </br>
+
+                  <form class= "form-m" method="POST">
+                    {% csrf_token %}
+                    
+                    <div class="input-group ">
+                      
+                      {{form.username}}
+                    </div>
+                    
+                  </br>
+                  <div class="input-group">
+                    {{form.email}}
+                  </div>
+                </br>
+                <div class="input-group">
+                  {{form.password1}}
+                </div>
+                
+              </br>
+              <div class="input-group">
+                {{form.password2}}
+              </div>
+            </br>
+                
+                    <button type="submit" class="btn btn-primary">SIGN UP</button>
+                  </form>
+                </div>
+
+                
+                <div class="welcome-box">
+                 
+                  <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <img src="../media/welcome.jpg">
+                      <div class="text">Welcome!</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="../media/welcome.jpg">
+                      <div class="text">Salem!</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="../media/welcome.jpg">
+                      <div class="text">Hola!</div>
+                    </div>
+                    
+                    
+                    </div>
+                    <br>
+                    <div class="text2">
+                      <p>To keep connected with us please enter persanal details to your account</p>
+                    </div>
+                    
+                    <div style="text-align:center; padding-top: 50px;">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                    <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+
+
+
+
+
+
+
+                    </script>
+                    
+                </div>
+    
+
+<br/>
+<br/> 
+
+<style>
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+  }
+
+  .mySlides {display: none; }
+
+  img {
+    vertical-align: middle;
+    width:100%; 
+    height: 340px;
+    padding-top: 10px;
+    left: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+.text {
+  width: 470px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 150px;
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: 55px;
+    opacity: 1;
+    text-align: center;
+}
+
+.btn{
+  background: linear-gradient(#9997FD, #9976C7);
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  font-family: Poppins;
+  text-align: center;
+  border: 0;
+  font-size: 15px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgba(249,205,164,1);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* .input-group{
+  padding-left: 105px;
+} */
+
+.active, .dot:hover {
+  background-color: rgba(253,91,0,1);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+  .bckgrnd {
+    width: 100%;
+    height: 1117px;
+    background: linear-gradient(rgba(243,205,73,0.75), rgba(251,200,23,0.20999999344348907));
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+  }
+  .whitebg {
+    width: 75%;
+    height: 520px;
+    background: rgba(255,255,255,1);
+    position: relative;
+    top: 60px;
+    left: 150px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+  }
+   .form {
+    width: 400px;
+    height: 400px;
+    top: 50px;
+    left: 100px;
+  } 
+  .welcome-box {
+    width: 470px;
+    height: 485px;
+    background: rgba(255,244,205,1);
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .slideshow-container{
+    max-width: 450px;
+    position: relative;
+    margin: auto;
+  }
+  .text2 {
+    width: 300px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 340px;
+    left: 90px;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 13px;
+    opacity: 1;
+    text-align: center;
+  }
+
+  .text-title{
+    width: 315px;
+    color: rgba(0,0,0,1);
+    position: relative;
+    top: 30px;
+    left: 40px;
+    font-family: Poppins;
+    font-weight: Medium;
+    font-size: 16px;
+    opacity: 1;
+    text-align: center;
+  }
+
+
+  .text-login{
+    width: 325px;
+    color: #c4c4c4;
+    position: absolute;
+    font-family: Poppins;
+    top: 95px;
+    left: 40px;
+    font-size: 12px;
+    opacity: 1;
+    text-align: center;
+  }
+
+
+  .form-m {
+    padding-left: 100px;
+  }
+
+  .input-group{
+    padding: 5px;
+  }
+
+
+
+
+
+
+  </style>
+{% endblock content %}

@@ -1,0 +1,1145 @@
+<!--{% extends 'base1.html' %}-->
+<!--{% load static %}-->
+
+<!--{% block content %}-->
+
+<!--<style>-->
+<!--  *{-->
+<!--    margin: 0;-->
+<!--    padding: 0;-->
+<!--  }-->
+<!--  .cont{-->
+<!--    display: flex;-->
+<!--    flex-direction: row;-->
+<!--    height: 540px;-->
+<!--    width: 100%;-->
+<!--    border-radius: 10px;-->
+<!--  }-->
+
+
+<!--  .users{-->
+<!--    width: 30%;-->
+<!--    display: flex;-->
+<!--    flex-direction: column;-->
+<!--  }-->
+
+
+<!--.user_img {-->
+<!--  height: 70px;-->
+<!--  width: 70px;-->
+<!--  border: 1.5px solid #000;-->
+<!--}-->
+<!--.user_img_msg {-->
+<!--  height: 30px;-->
+<!--  width: 30px;-->
+<!--  border: 1.5px solid #000;-->
+<!--}-->
+<!--.img_cont {-->
+<!--  position: relative;-->
+<!--  height: 70px;-->
+<!--  width: 70px;-->
+<!--}-->
+<!--.img_cont_msg {-->
+<!--  height: 40px;-->
+<!--  width: 40px;-->
+<!--}-->
+
+<!--  .chatting{-->
+<!--    width: 70%;-->
+<!--    background: #fff;-->
+<!--    border: 1px solid rgba(250, 123, 32, 0.619);-->
+<!--    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;-->
+<!--    margin: 5px;-->
+<!--    border-radius: 10px;-->
+<!--  }-->
+
+<!--  .user_card{-->
+<!--    height: 80px;-->
+<!--  }-->
+
+<!--  .typing{-->
+<!--    bottom: 50px;-->
+<!--    position: absolute;-->
+<!--    display: flex;-->
+<!--    flex-direction: row;-->
+<!--  }-->
+
+<!--  .users li {-->
+<!--  width: 100% !important;-->
+<!--  padding: 5px 10px;-->
+<!--}-->
+
+<!--.chat {-->
+<!--  margin-top: auto;-->
+<!--  margin-bottom: auto;-->
+<!--}-->
+<!--.card {-->
+<!--  height: 90%;-->
+<!--  border-radius: 10px !important;-->
+
+<!--  background-color: rgba(250, 123, 32, 0.619) !important;-->
+
+<!--}-->
+<!--.contacts_body {-->
+<!--  padding: 0.75rem 0 !important;-->
+<!--  overflow-y: scroll;-->
+<!--  white-space: nowrap;-->
+<!--}-->
+<!--.msg_card_body {-->
+<!--  overflow-y: scroll;-->
+<!--  max-height: 65%;-->
+<!--  padding-bottom: 20px;-->
+<!--}-->
+
+<!--.msg_cotainer_send {-->
+<!--  min-width: 70px;-->
+<!--  text-align: center;-->
+<!--  margin-top: auto;-->
+<!--  margin-bottom: auto;-->
+<!--  margin-right: 10px;-->
+<!--  border-radius: 25px;-->
+<!--  background-color: #78e08f;-->
+<!--  padding: 10px;-->
+<!--  position: relative;-->
+<!--}-->
+<!--.card-header {-->
+<!--  border-radius: 10px 10px 0 0 !important;-->
+<!--  border-bottom: 0 !important;-->
+<!--  width: 520px;-->
+<!--  display: flex;-->
+<!--  flex-direction: row;-->
+<!--}-->
+<!--.card-footer {-->
+<!--  border-radius: 0 0 10px 10px !important;-->
+<!--  display: flex;-->
+<!--  flex-direction: row;-->
+<!--}-->
+
+
+<!--.type_msg {-->
+<!--  background-color: #E5E5E5 !important;-->
+<!--  border-radius: 10px 0px 0px 10px;-->
+<!--  color: black !important;-->
+<!--  width: 90px;-->
+<!--  height: 58px !important;-->
+<!--}-->
+<!--.type_msg:focus {-->
+<!--  box-shadow: none !important;-->
+<!--  outline: 0px !important;-->
+<!--}-->
+<!--.btn {-->
+<!--  border-radius: 0 10px 10px 0 !important;-->
+<!--  color: #fff !important;-->
+<!--  border: none !important;-->
+<!--  font-size: 23px;-->
+<!--  cursor: pointer;-->
+<!--  padding: 14px;-->
+<!--  float: right;-->
+<!--  padding-top: 16.5px;-->
+<!--  background: rgb(255, 112, 9);-->
+<!--}-->
+
+<!--input{-->
+<!--  padding-left: 10px;-->
+<!--  font-family: 'Poppins', sans-serif;-->
+<!--  background: #E5E5E5;-->
+<!--  font-size: 15px;-->
+<!--      }-->
+
+<!--.users {-->
+<!--  list-style: none;-->
+<!--  padding: 0;-->
+<!--}-->
+<!--.users li {-->
+<!--  width: 100% !important;-->
+
+<!--  padding: 5px 10px;-->
+<!--}-->
+<!--.user_img {-->
+<!--  height: 70px;-->
+<!--  width: 70px;-->
+<!--  border: 1.5px solid #f5f6fa;-->
+<!--}-->
+<!--.user_img_msg {-->
+<!--  height: 30px;-->
+<!--  width: 30px;-->
+<!--  border: 1.5px solid #f5f6fa;-->
+<!--}-->
+<!--.img_contt {-->
+<!--  position: relative;-->
+<!--  height: 70px;-->
+<!--  width: 20%;-->
+
+<!--}-->
+
+
+<!--.img_cont {-->
+<!--  position: relative;-->
+<!--  height: 70px;-->
+<!--  width: 70px;-->
+<!--}-->
+
+
+<!--.user_info {-->
+<!--  margin-top: auto;-->
+<!--  margin-bottom: auto;-->
+<!--  margin-left: 15px;-->
+<!--  display: flex;-->
+<!--  flex-direction: row;-->
+
+<!--}-->
+<!--.user_info span {-->
+<!--  font-size: 20px;-->
+<!--  color: black;-->
+<!--}-->
+<!--.user_info p {-->
+<!--  font-size: 10px;-->
+<!--  padding-left: 10px;-->
+<!--}-->
+<!--.msg_cotainer {-->
+<!--  margin-top: auto;-->
+<!--  margin-bottom: auto;-->
+<!--  margin-left: 10px;-->
+<!--  border-radius: 10px;-->
+<!--  background-color: #000000;-->
+<!--  padding: 10px;-->
+<!--  position: relative;-->
+<!--  min-width: 70px;-->
+<!--  text-align: center;-->
+<!--}-->
+<!--.msg_time {-->
+<!--  position: absolute;-->
+<!--  left: 0;-->
+<!--  bottom: -15px;-->
+<!--  font-size: 10px;-->
+<!--}-->
+<!--.msg_time_send {-->
+<!--  position: absolute;-->
+<!--  right: 0;-->
+<!--  bottom: -15px;-->
+<!--  font-size: 10px;-->
+<!--}-->
+<!--.msg_head {-->
+<!--  position: relative;-->
+<!--}-->
+
+<!--.received {-->
+<!--  justify-content: flex-start;-->
+<!--}-->
+
+<!--.replied {-->
+<!--  justify-content: flex-end;-->
+<!--}-->
+
+<!--.is_active{-->
+<!--  display: block !important;-->
+<!--}-->
+
+
+<!--/* Hide scrollbar for Chrome, Safari and Opera */-->
+<!--.msg_card_body::-webkit-scrollbar {-->
+<!--  display: none;-->
+<!--}-->
+
+<!--/* Hide scrollbar for IE, Edge and Firefox */-->
+<!--.msg_card_body {-->
+<!--  -ms-overflow-style: none;  /* IE and Edge */-->
+<!--  scrollbar-width: none;  /* Firefox */-->
+<!--}-->
+
+<!--.messages-wrapper{-->
+<!--  height: 100%;-->
+<!--}-->
+
+<!--.hide{-->
+<!--  display: none;-->
+<!--}-->
+
+<!--</style>-->
+
+<!--<div class="cont">-->
+<!--  {% if user.is_authenticated %}-->
+<!--        <input type="hidden" id="logged-in-user" value="{{ user.id }}">-->
+<!--    {% endif %}-->
+<!--  <div class="users">-->
+<!--    {% for thread in Threads %}-->
+<!--                                <li class="{% if forloop.first %}active{% endif %} contact-li" chat-id="chat_{{ thread.id }}" style="cursor: pointer">-->
+<!--                                    <div class="d-flex bd-highlight" style="width: 230px; height: 100px; background: #fff; border-radius: 10px; border: 1px solid rgba(250, 123, 32, 0.619);-->
+<!--                                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;">-->
+<!--                                        <div class="img_cont">-->
+<!--                                            <img src="/media/avatar.svg.png" class="rounded-circle user_img" style="background: rgba(250, 123, 32, 0.619);">-->
+
+<!--                                        </div>-->
+<!--                                        <div class="user_info">-->
+<!--                                            {% if thread.first_person == user %}-->
+<!--                                                <span>{{ thread.second_person.username }}</span>-->
+
+<!--                                            {% else %}-->
+
+
+<!--                                                <span>{{ thread.first_person.username }}</span>-->
+<!--                                            {% endif %}-->
+
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+<!--                            {% endfor %}-->
+<!--  </div>-->
+
+<!--  <div class="chatting">-->
+<!--    <div class="user_card">-->
+<!--      <div class="card">-->
+<!--        {% for thread in Threads %}-->
+
+<!--            <div class="messages-wrapper  {% if forloop.first %}hide is_active{% else %}hide{% endif %}" chat-id="chat_{{ thread.id }}" other-user-id="-->
+
+<!--                        {% if thread.first_person == user %}-->
+<!--                            {{ thread.second_person.id }}-->
+<!--                        {% else %}-->
+<!--                            {{ thread.first_person.id }}-->
+<!--                        {% endif %}-->
+<!--                    ">-->
+<!--                <div class="card-header msg_head">-->
+<!--                        <div class="img_contt">-->
+<!--                            <img src="/media/avatar.svg.png" class="rounded-circle user_img">-->
+
+<!--                        </div>-->
+<!--                        <div class="user_info">-->
+<!--                            {% if thread.first_person == user %}-->
+
+<!--                                    <span>Chat with {{ thread.second_person.username }}</span>-->
+<!--                            {% else %}-->
+<!--                                <span>Chat with {{ thread.first_person.username }}</span>-->
+<!--                            {% endif %}-->
+<!--                            <p>{{ thread.chatmessage_thread.all.count }} messages</p>-->
+<!--                        </div>-->
+<!--                </div>-->
+
+<!--                <div class="card-body msg_card_body">-->
+<!--                    {% for chat in thread.chatmessage_thread.all %}-->
+<!--                        {% if chat.user == user %}-->
+<!--                            <div class="d-flex mb-4 replied">-->
+<!--                                <div class="msg_cotainer_send">-->
+<!--                                    {{ chat.message }}-->
+<!--                                    <span class="msg_time_send">{{ chat.timestamp|date:"d D" }}, {{ chat.timestamp|time:"H:i" }}</span>-->
+<!--                                </div>-->
+<!--                            <div class="img_cont_msg">-->
+<!--                                <img src="/media/avatar.svg.png" class="rounded-circle user_img_msg">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        {% else %}-->
+<!--                            <div class="d-flex mb-4 received">-->
+<!--                            <div class="img_cont_msg">-->
+<!--                                <img src="/media/avatar.svg.png" class="rounded-circle user_img_msg">-->
+<!--                            </div>-->
+<!--                            <div class="msg_cotainer">-->
+<!--                                {{ chat.message }}-->
+<!--                                <span class="msg_time">{{ chat.timestamp|date:"d D" }}, {{ chat.timestamp|time:"H:i" }}</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        {% endif %}-->
+<!--                    {% endfor %}-->
+
+<!--    </div>-->
+<!--    </div>-->
+
+<!--    {% endfor %}-->
+
+<!--    <div class="typing">-->
+<!--      <form id="send-message-form">-->
+<!--        <div class="input-group">-->
+<!--            <div class="input-group-append">-->
+<!--            </div>-->
+<!--            <input type="text" name="" id="input-message" class="form-control type_msg" placeholder="Type here...">-->
+
+<!--                <button class="btn btn-secondary" type="submit">-->
+<!--                        <i class="fas fa-location-arrow"></i>-->
+<!--                </button>-->
+
+
+<!--    </div>-->
+<!--    </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<script src="{% static 'js/messages.js' %}"></script>-->
+
+
+<!--{% endblock content %}-->
+
+<!--    &lt;!&ndash; {% if user.is_authenticated %}-->
+<!--        <input type="hidden" id="logged-in-user" value="{{ user.id }}">-->
+<!--    {% endif %}-->
+<!--		<div class="container-fluid h-100">-->
+<!--			<div class="cont">-->
+<!--				<div class="col-md-4 col-xl-3 chat h-100 mt-4">-->
+<!--                    <div class="card mb-sm-3 mb-md-0 contacts_card">-->
+<!--					<div class="card-header1">-->
+<!--						<div class="input-group">-->
+<!--							<div class="input-group-prepend">-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="card-body contacts_body">-->
+<!--						<ui class="contacts">-->
+<!--                            {% for thread in Threads %}-->
+<!--                                <li class="{% if forloop.first %}active{% endif %} contact-li" chat-id="chat_{{ thread.id }}" style="cursor: pointer">-->
+<!--                                    <div class="d-flex bd-highlight" style="width: 300px; height: 100px;">-->
+<!--                                        <div class="img_cont">-->
+<!--                                            <img src="/media/default-avatar.png" class="rounded-circle user_img">-->
+<!--                                            <span class="online_icon"></span>-->
+<!--                                        </div>-->
+<!--                                        <div class="user_info">-->
+<!--                                            {% if thread.first_person == user %}-->
+<!--                                                <span>{{ thread.second_person.username }}</span>-->
+<!--                                            {% else %}-->
+<!--                                                <span>{{ thread.first_person.username }}</span>-->
+<!--                                            {% endif %}-->
+
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+<!--                            {% endfor %}-->
+<!--						</ui>-->
+<!--					</div>-->
+<!--				</div></div>-->
+<!--				<div class="col-md-8 col-xl-6 chat h-100 mt-4">-->
+<!--					<div class="card">-->
+<!--                        {% for thread in Threads %}-->
+<!--                            <div class="messages-wrapper  {% if forloop.first %}hide is_active{% else %}hide{% endif %}" chat-id="chat_{{ thread.id }}" other-user-id="-->
+<!--                                        {% if thread.first_person == user %}-->
+<!--                                            {{ thread.second_person.id }}-->
+<!--                                        {% else %}-->
+<!--                                            {{ thread.first_person.id }}-->
+<!--                                        {% endif %}-->
+<!--                                    ">-->
+<!--                                <div class="card-header msg_head">-->
+<!--                                    <div class="d-flex bd-highlight">-->
+<!--                                        <div class="img_cont">-->
+<!--                                            <img src="/media/avatar.svg.png" class="rounded-circle user_img">-->
+<!--                                            <span class="online_icon"></span>-->
+<!--                                        </div>-->
+<!--                                        <div class="user_info">-->
+<!--                                            {% if thread.first_person == user %}-->
+<!--                                                    <span>Chat with {{ thread.second_person.username }}</span>-->
+<!--                                            {% else %}-->
+<!--                                                <span>Chat with {{ thread.first_person.username }}</span>-->
+<!--                                            {% endif %}-->
+
+<!--                                            <p>{{ thread.chatmessage_thread.all.count }} messages</p>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="card-body msg_card_body">-->
+<!--                                    {% for chat in thread.chatmessage_thread.all %}-->
+<!--                                        {% if chat.user == user %}-->
+<!--                                            <div class="d-flex mb-4 replied">-->
+<!--                                                <div class="msg_cotainer_send">-->
+<!--                                                    {{ chat.message }}-->
+<!--                                                    <span class="msg_time_send">{{ chat.timestamp|date:"d D" }}, {{ chat.timestamp|time:"H:i" }}</span>-->
+<!--                                                </div>-->
+<!--                                            <div class="img_cont_msg">-->
+<!--                                                <img src="/media/avatar.svg.png" class="rounded-circle user_img_msg">-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        {% else %}-->
+<!--                                            <div class="d-flex mb-4 received">-->
+<!--                                            <div class="img_cont_msg">-->
+<!--                                                <img src="/media/avatar.svg.png" class="rounded-circle user_img_msg">-->
+<!--                                            </div>-->
+<!--                                            <div class="msg_cotainer">-->
+<!--                                                {{ chat.message }}-->
+<!--                                                <span class="msg_time">{{ chat.timestamp|date:"d D" }}, {{ chat.timestamp|time:"H:i" }}</span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        {% endif %}-->
+<!--                                    {% endfor %}-->
+
+<!--                                </div>-->
+
+<!--					        </div>-->
+<!--                        {% endfor %}-->
+<!--                        <div class="card-footer">-->
+<!--                                <form id="send-message-form">-->
+<!--                                    <div class="input-group">-->
+<!--                                        <div class="input-group-append">-->
+<!--                                        </div>-->
+<!--                                        <input type="text" name="" id="input-message" class="form-control type_msg" placeholder="Type your message...">-->
+<!--                                        <div class="input-group-append">-->
+<!--                                            <button class="btn btn-secondary" type="submit">-->
+<!--                                                <span class="input-group-text send_btn">-->
+<!--                                                    <i class="fas fa-location-arrow"></i>-->
+<!--                                                </span>-->
+<!--                                            </button>-->
+
+<!--                                        </div>-->
+<!--                                </div>-->
+<!--                                </form>-->
+<!--                            </div>-->
+<!--                    </div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+
+
+<!--<style>-->
+<!--body,-->
+
+<!--html {-->
+<!--  height: 100%;-->
+<!--  margin: 0;-->
+<!--  background: #7f7fd5;-->
+<!--  background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);-->
+<!--  background: linear-gradient(rgba(243,205,73,0.75),rgba(251,200,23,0.20999999344348907));-->
+
+<!--}-->
+
+<!--.cont{-->
+<!--  display: flex;-->
+<!--  flex-direction: row;-->
+<!--  width: 100%;-->
+<!--  height: 520px;-->
+
+<!--}-->
+<!--.chat {-->
+<!--  margin-top: auto;-->
+<!--  margin-bottom: auto;-->
+<!--}-->
+<!--.card {-->
+<!--  height: 90%;-->
+<!--  border-radius: 15px !important;-->
+<!--  background-color: rgba(0, 0, 0, 0.4) !important;-->
+
+<!--}-->
+<!--.contacts_body {-->
+<!--  padding: 0.75rem 0 !important;-->
+<!--  overflow-y: auto;-->
+<!--  white-space: nowrap;-->
+<!--}-->
+<!--.msg_card_body {-->
+<!--  overflow-y: auto;-->
+<!--  max-height: 65%;-->
+<!--  padding-bottom: 20px;-->
+<!--}-->
+<!--.card-header {-->
+<!--  border-radius: 20px 20px 0 0 !important;-->
+<!--  border-bottom: 0 !important;-->
+<!--  width: 520px;-->
+<!--}-->
+<!--.card-footer {-->
+<!--  border-radius: 0 0 15px 15px !important;-->
+<!--  border-top: 0 !important;-->
+<!--  bottom: 0;-->
+<!--  position: absolute;-->
+<!--  /* width: 100px; */-->
+<!--}-->
+
+<!--.search {-->
+<!--  border-radius: 15px 0 0 15px !important;-->
+<!--  background-color: rgba(0, 0, 0, 0.3) !important;-->
+<!--  border: 0 !important;-->
+<!--  color: chocolate !important;-->
+<!--}-->
+<!--.search:focus {-->
+<!--  box-shadow: none !important;-->
+<!--  outline: 0px !important;-->
+<!--}-->
+<!--.type_msg {-->
+<!--  background-color: white !important;-->
+<!--  border: 0 !important;-->
+<!--  color: white !important;-->
+<!--  height: 60px !important;-->
+<!--  overflow-y: auto;-->
+<!--}-->
+<!--.type_msg:focus {-->
+<!--  box-shadow: none !important;-->
+<!--  outline: 0px !important;-->
+<!--}-->
+<!--.attach_btn {-->
+<!--  border-radius: 15px 0 0 15px !important;-->
+<!--  background-color: rgba(0, 0, 0, 0.3) !important;-->
+<!--  border: 0 !important;-->
+<!--  color: white !important;-->
+<!--  cursor: pointer;-->
+<!--}-->
+<!--.send_btn {-->
+<!--  border-radius: 0 15px 15px 0 !important;-->
+<!--  background-color: rgba(0, 0, 0, 0.3) !important;-->
+<!--  border: 0 !important;-->
+<!--  color: white !important;-->
+<!--  cursor: pointer;-->
+<!--}-->
+<!--.search_btn {-->
+<!--  border-radius: 0 15px 15px 0 !important;-->
+<!--  background-color: rgba(0, 0, 0, 0.3) !important;-->
+<!--  border: 0 !important;-->
+<!--  color: white !important;-->
+<!--  cursor: pointer;-->
+<!--}-->
+<!--.contacts {-->
+<!--  list-style: none;-->
+<!--  padding: 0;-->
+<!--  max-height: 540px;-->
+<!--}-->
+<!--.contacts li {-->
+<!--  width: 100% !important;-->
+
+<!--  padding: 5px 10px;-->
+<!--}-->
+<!--.active {-->
+<!--  background-color: rgba(0, 0, 0, 0.3);-->
+<!--}-->
+<!--.user_img {-->
+<!--  height: 70px;-->
+<!--  width: 70px;-->
+<!--  border: 1.5px solid #f5f6fa;-->
+<!--}-->
+<!--.user_img_msg {-->
+<!--  height: 30px;-->
+<!--  width: 30px;-->
+<!--  border: 1.5px solid #f5f6fa;-->
+<!--}-->
+<!--.img_cont {-->
+<!--  position: relative;-->
+<!--  height: 70px;-->
+<!--  width: 70px;-->
+<!--}-->
+<!--.img_cont_msg {-->
+<!--  height: 40px;-->
+<!--  width: 40px;-->
+<!--}-->
+<!--.online_icon {-->
+<!--  position: absolute;-->
+<!--  height: 15px;-->
+<!--  width: 15px;-->
+<!--  background-color: #4cd137;-->
+<!--  border-radius: 50%;-->
+<!--  bottom: 0.2em;-->
+<!--  right: 0.4em;-->
+<!--  border: 1.5px solid white;-->
+<!--}-->
+<!--.offline {-->
+<!--  background-color: #c23616 !important;-->
+<!--}-->
+<!--.user_info {-->
+<!--  margin-top: auto;-->
+<!--  margin-bottom: auto;-->
+<!--  margin-left: 15px;-->
+<!--}-->
+<!--.user_info span {-->
+<!--  font-size: 20px;-->
+<!--  color: white;-->
+<!--}-->
+<!--.user_info p {-->
+<!--  font-size: 10px;-->
+<!--  color: rgba(255, 255, 255, 0.6);-->
+<!--}-->
+<!--.video_cam {-->
+<!--  margin-left: 50px;-->
+<!--  margin-top: 5px;-->
+<!--}-->
+<!--.video_cam span {-->
+<!--  color: white;-->
+<!--  font-size: 20px;-->
+<!--  cursor: pointer;-->
+<!--  margin-right: 20px;-->
+<!--}-->
+<!--.msg_cotainer {-->
+<!--  margin-top: auto;-->
+<!--  margin-bottom: auto;-->
+<!--  margin-left: 10px;-->
+<!--  border-radius: 25px;-->
+<!--  background-color: #82ccdd;-->
+<!--  padding: 10px;-->
+<!--  position: relative;-->
+<!--  min-width: 70px;-->
+<!--  text-align: center;-->
+<!--}-->
+<!--.msg_cotainer_send {-->
+<!--  min-width: 70px;-->
+<!--  text-align: center;-->
+<!--  margin-top: auto;-->
+<!--  margin-bottom: auto;-->
+<!--  margin-right: 10px;-->
+<!--  border-radius: 25px;-->
+<!--  background-color: #78e08f;-->
+<!--  padding: 10px;-->
+<!--  position: relative;-->
+<!--}-->
+<!--.msg_time {-->
+<!--  position: absolute;-->
+<!--  left: 0;-->
+<!--  bottom: -15px;-->
+<!--  color: rgba(255, 255, 255, 0.5);-->
+<!--  font-size: 10px;-->
+<!--}-->
+<!--.msg_time_send {-->
+<!--  position: absolute;-->
+<!--  right: 0;-->
+<!--  bottom: -15px;-->
+<!--  color: rgba(255, 255, 255, 0.5);-->
+<!--  font-size: 10px;-->
+<!--}-->
+<!--.msg_head {-->
+<!--  position: relative;-->
+<!--}-->
+
+<!--.received {-->
+<!--  justify-content: flex-start;-->
+<!--}-->
+
+<!--.replied {-->
+<!--  justify-content: flex-end;-->
+<!--}-->
+
+<!--.is_active{-->
+<!--  display: block !important;-->
+<!--}-->
+
+<!--.hide{-->
+<!--  display: none;-->
+<!--}-->
+
+<!--/* Hide scrollbar for Chrome, Safari and Opera */-->
+<!--.msg_card_body::-webkit-scrollbar {-->
+<!--  display: none;-->
+<!--}-->
+
+<!--/* Hide scrollbar for IE, Edge and Firefox */-->
+<!--.msg_card_body {-->
+<!--  -ms-overflow-style: none;  /* IE and Edge */-->
+<!--  scrollbar-width: none;  /* Firefox */-->
+<!--}-->
+
+<!--.messages-wrapper{-->
+<!--  height: 100%;-->
+<!--}-->
+<!--    </style> &ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;{% load static %}&ndash;&gt;-->
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html>&ndash;&gt;-->
+<!--&lt;!&ndash;	<head>&ndash;&gt;-->
+<!--&lt;!&ndash;		<title>Chat</title>&ndash;&gt;-->
+<!--&lt;!&ndash;		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">&ndash;&gt;-->
+<!--&lt;!&ndash;		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">&ndash;&gt;-->
+<!--&lt;!&ndash;		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">&ndash;&gt;-->
+<!--&lt;!&ndash;		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <link rel="stylesheet" href="{% static 'css/messages.css' %}">&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </head>&ndash;&gt;-->
+<!--&lt;!&ndash;	&lt;!&ndash;Coded With Love By Mutiullah Samim&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;	<body>&ndash;&gt;-->
+<!--&lt;!&ndash;    {% if user.is_authenticated %}&ndash;&gt;-->
+<!--&lt;!&ndash;        <h1 style="text-align: end; padding-right: 10px">Logged in as : {{ user.username }}</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="hidden" id="logged-in-user" value="{{ user.id }}">&ndash;&gt;-->
+<!--&lt;!&ndash;    {% endif %}&ndash;&gt;-->
+<!--&lt;!&ndash;		<div class="container-fluid h-100">&ndash;&gt;-->
+<!--&lt;!&ndash;			<div class="row justify-content-center h-100 ">&ndash;&gt;-->
+<!--&lt;!&ndash;				<div class="col-md-4 col-xl-3 chat h-100 mt-4">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="card mb-sm-3 mb-md-0 contacts_card">&ndash;&gt;-->
+<!--&lt;!&ndash;					<div class="card-header">&ndash;&gt;-->
+<!--&lt;!&ndash;						<div class="input-group">&ndash;&gt;-->
+<!--&lt;!&ndash;							<input type="text" placeholder="Search..." name="" class="form-control search">&ndash;&gt;-->
+<!--&lt;!&ndash;							<div class="input-group-prepend">&ndash;&gt;-->
+<!--&lt;!&ndash;								<span class="input-group-text search_btn"><i class="fas fa-search"></i></span>&ndash;&gt;-->
+<!--&lt;!&ndash;							</div>&ndash;&gt;-->
+<!--&lt;!&ndash;						</div>&ndash;&gt;-->
+<!--&lt;!&ndash;					</div>&ndash;&gt;-->
+<!--&lt;!&ndash;					<div class="card-body contacts_body">&ndash;&gt;-->
+<!--&lt;!&ndash;						<ui class="contacts">&ndash;&gt;-->
+<!--&lt;!&ndash;                            {% for thread in Threads %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                <li class="{% if forloop.first %}active{% endif %} contact-li" chat-id="chat_{{ thread.id }}" style="cursor: pointer">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="d-flex bd-highlight">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <div class="img_cont">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <span class="online_icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <div class="user_info">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            {% if thread.first_person == user %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <span>{{ thread.second_person.username }}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            {% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <span>{{ thread.first_person.username }}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            {% endif %}&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;{#                                            <p>Kalid is online</p>#}&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                            {% endfor %}&ndash;&gt;-->
+<!--&lt;!&ndash;						</ui>&ndash;&gt;-->
+<!--&lt;!&ndash;					</div>&ndash;&gt;-->
+<!--&lt;!&ndash;					<div class="card-footer"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;				</div></div>&ndash;&gt;-->
+<!--&lt;!&ndash;				<div class="col-md-8 col-xl-6 chat h-100 mt-4">&ndash;&gt;-->
+<!--&lt;!&ndash;					<div class="card">&ndash;&gt;-->
+<!--&lt;!&ndash;                        {% for thread in Threads %}&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="messages-wrapper  {% if forloop.first %}hide is_active{% else %}hide{% endif %}" chat-id="chat_{{ thread.id }}" other-user-id="&ndash;&gt;-->
+<!--&lt;!&ndash;                                        {% if thread.first_person == user %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                            {{ thread.second_person.id }}&ndash;&gt;-->
+<!--&lt;!&ndash;                                        {% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                            {{ thread.first_person.id }}&ndash;&gt;-->
+<!--&lt;!&ndash;                                        {% endif %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                    ">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="card-header msg_head">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="d-flex bd-highlight">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <div class="img_cont">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <span class="online_icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <div class="user_info">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            {% if thread.first_person == user %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    <span>Chat with {{ thread.second_person.username }}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            {% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <span>Chat with {{ thread.first_person.username }}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            {% endif %}&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                            <p>{{ thread.chatmessage_thread.all.count }} messages</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <div class="video_cam">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <span><i class="fas fa-video"></i></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <span><i class="fas fa-phone"></i></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="action_menu">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <li><i class="fas fa-user-circle"></i> View profile</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <li><i class="fas fa-users"></i> Add to close friends</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <li><i class="fas fa-plus"></i> Add to group</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <li><i class="fas fa-ban"></i> Block</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                <div class="card-body msg_card_body">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    &lt;!&ndash;-&#45;&#45;&#45;&#45; messages -&#45;&#45;&#45;&#45;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                    {% for chat in thread.chatmessage_thread.all %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                        {% if chat.user == user %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <div class="d-flex mb-4 replied">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <div class="msg_cotainer_send">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    {{ chat.message }}&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    <span class="msg_time_send">{{ chat.timestamp|date:"d D" }}, {{ chat.timestamp|time:"H:i" }}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <div class="img_cont_msg">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <img src="data:image/jpeg;base64,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" class="rounded-circle user_img_msg">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        {% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <div class="d-flex mb-4 received">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <div class="img_cont_msg">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <div class="msg_cotainer">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                {{ chat.message }}&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <span class="msg_time">{{ chat.timestamp|date:"d D" }}, {{ chat.timestamp|time:"H:i" }}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        {% endif %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                    {% endfor %}&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                                    &lt;!&ndash;-&#45;&#45;&#45;&#45; messages -&#45;&#45;&#45;&#45;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;					        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        {% endfor %}&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="card-footer">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <form id="send-message-form">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="input-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <div class="input-group-append">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <input type="text" name="" id="input-message" class="form-control type_msg" placeholder="Type your message...">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <div class="input-group-append">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <button class="btn btn-secondary" type="submit">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <span class="input-group-text send_btn">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    <i class="fas fa-location-arrow"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                </span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            </button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </form>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+<!--&lt;!&ndash;			</div>&ndash;&gt;-->
+<!--&lt;!&ndash;		</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <script src="{% static 'js/messages.js' %}"></script>&ndash;&gt;-->
+
+<!--&lt;!&ndash;	</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<style>&ndash;&gt;-->
+<!--&lt;!&ndash;    body&ndash;&gt;-->
+<!--&lt;!&ndash;body,&ndash;&gt;-->
+<!--&lt;!&ndash;html {&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  background: #7f7fd5;&ndash;&gt;-->
+<!--&lt;!&ndash;  background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);&ndash;&gt;-->
+<!--&lt;!&ndash;  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;.chat {&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-top: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-bottom: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.card {&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 90%;&ndash;&gt;-->
+<!--&lt;!&ndash;  border-radius: 15px !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: rgba(0, 0, 0, 0.4) !important;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.contacts_body {&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 0.75rem 0 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  overflow-y: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;  white-space: nowrap;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.msg_card_body {&ndash;&gt;-->
+<!--&lt;!&ndash;  overflow-y: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;  max-height: 65%;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding-bottom: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.card-header {&ndash;&gt;-->
+<!--&lt;!&ndash;  border-radius: 15px 15px 0 0 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  border-bottom: 0 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.card-footer {&ndash;&gt;-->
+<!--&lt;!&ndash;  border-radius: 0 0 15px 15px !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  border-top: 0 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  bottom: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  position: absolute;&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.container {&ndash;&gt;-->
+<!--&lt;!&ndash;  align-content: center;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.search {&ndash;&gt;-->
+<!--&lt;!&ndash;  border-radius: 15px 0 0 15px !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: rgba(0, 0, 0, 0.3) !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: 0 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: white !important;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.search:focus {&ndash;&gt;-->
+<!--&lt;!&ndash;  box-shadow: none !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  outline: 0px !important;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.type_msg {&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: rgba(0, 0, 0, 0.3) !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: 0 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: white !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 60px !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  overflow-y: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.type_msg:focus {&ndash;&gt;-->
+<!--&lt;!&ndash;  box-shadow: none !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  outline: 0px !important;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.attach_btn {&ndash;&gt;-->
+<!--&lt;!&ndash;  border-radius: 15px 0 0 15px !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: rgba(0, 0, 0, 0.3) !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: 0 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: white !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  cursor: pointer;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.send_btn {&ndash;&gt;-->
+<!--&lt;!&ndash;  border-radius: 0 15px 15px 0 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: rgba(0, 0, 0, 0.3) !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: 0 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: white !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  cursor: pointer;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.search_btn {&ndash;&gt;-->
+<!--&lt;!&ndash;  border-radius: 0 15px 15px 0 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: rgba(0, 0, 0, 0.3) !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: 0 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: white !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  cursor: pointer;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.contacts {&ndash;&gt;-->
+<!--&lt;!&ndash;  list-style: none;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.contacts li {&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 100% !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 5px 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-bottom: 15px !important;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.active {&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: rgba(0, 0, 0, 0.3);&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.user_img {&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 70px;&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 70px;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: 1.5px solid #f5f6fa;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.user_img_msg {&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: 1.5px solid #f5f6fa;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.img_cont {&ndash;&gt;-->
+<!--&lt;!&ndash;  position: relative;&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 70px;&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 70px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.img_cont_msg {&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.online_icon {&ndash;&gt;-->
+<!--&lt;!&ndash;  position: absolute;&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: #4cd137;&ndash;&gt;-->
+<!--&lt;!&ndash;  border-radius: 50%;&ndash;&gt;-->
+<!--&lt;!&ndash;  bottom: 0.2em;&ndash;&gt;-->
+<!--&lt;!&ndash;  right: 0.4em;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: 1.5px solid white;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.offline {&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: #c23616 !important;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.user_info {&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-top: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-bottom: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-left: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.user_info span {&ndash;&gt;-->
+<!--&lt;!&ndash;  font-size: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: white;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.user_info p {&ndash;&gt;-->
+<!--&lt;!&ndash;  font-size: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: rgba(255, 255, 255, 0.6);&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.video_cam {&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-left: 50px;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-top: 5px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.video_cam span {&ndash;&gt;-->
+<!--&lt;!&ndash;  color: white;&ndash;&gt;-->
+<!--&lt;!&ndash;  font-size: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;  cursor: pointer;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-right: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.msg_cotainer {&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-top: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-bottom: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-left: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  border-radius: 25px;&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: #82ccdd;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  position: relative;&ndash;&gt;-->
+<!--&lt;!&ndash;  min-width: 70px;&ndash;&gt;-->
+<!--&lt;!&ndash;  text-align: center;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.msg_cotainer_send {&ndash;&gt;-->
+<!--&lt;!&ndash;  min-width: 70px;&ndash;&gt;-->
+<!--&lt;!&ndash;  text-align: center;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-top: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-bottom: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-right: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  border-radius: 25px;&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: #78e08f;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  position: relative;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.msg_time {&ndash;&gt;-->
+<!--&lt;!&ndash;  position: absolute;&ndash;&gt;-->
+<!--&lt;!&ndash;  left: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  bottom: -15px;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: rgba(255, 255, 255, 0.5);&ndash;&gt;-->
+<!--&lt;!&ndash;  font-size: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.msg_time_send {&ndash;&gt;-->
+<!--&lt;!&ndash;  position: absolute;&ndash;&gt;-->
+<!--&lt;!&ndash;  right: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  bottom: -15px;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: rgba(255, 255, 255, 0.5);&ndash;&gt;-->
+<!--&lt;!&ndash;  font-size: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.msg_head {&ndash;&gt;-->
+<!--&lt;!&ndash;  position: relative;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;#action_menu_btn {&ndash;&gt;-->
+<!--&lt;!&ndash;  position: absolute;&ndash;&gt;-->
+<!--&lt;!&ndash;  right: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  top: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: white;&ndash;&gt;-->
+<!--&lt;!&ndash;  cursor: pointer;&ndash;&gt;-->
+<!--&lt;!&ndash;  font-size: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.action_menu {&ndash;&gt;-->
+<!--&lt;!&ndash;  z-index: 1;&ndash;&gt;-->
+<!--&lt;!&ndash;  position: absolute;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 15px 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: rgba(0, 0, 0, 0.5);&ndash;&gt;-->
+<!--&lt;!&ndash;  color: white;&ndash;&gt;-->
+<!--&lt;!&ndash;  border-radius: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;  top: 30px;&ndash;&gt;-->
+<!--&lt;!&ndash;  right: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;  display: none;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.action_menu ul {&ndash;&gt;-->
+<!--&lt;!&ndash;  list-style: none;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.action_menu ul li {&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 10px 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-bottom: 5px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.action_menu ul li i {&ndash;&gt;-->
+<!--&lt;!&ndash;  padding-right: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.action_menu ul li:hover {&ndash;&gt;-->
+<!--&lt;!&ndash;  cursor: pointer;&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: rgba(0, 0, 0, 0.2);&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;@media (max-width: 576px) {&ndash;&gt;-->
+<!--&lt;!&ndash;  .contacts_card {&ndash;&gt;-->
+<!--&lt;!&ndash;    margin-bottom: 15px !important;&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;.received {&ndash;&gt;-->
+<!--&lt;!&ndash;  justify-content: flex-start;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;.replied {&ndash;&gt;-->
+<!--&lt;!&ndash;  justify-content: flex-end;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;.is_active{&ndash;&gt;-->
+<!--&lt;!&ndash;  display: block !important;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;.hide{&ndash;&gt;-->
+<!--&lt;!&ndash;  display: none;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;/* Hide scrollbar for Chrome, Safari and Opera */&ndash;&gt;-->
+<!--&lt;!&ndash;.msg_card_body::-webkit-scrollbar {&ndash;&gt;-->
+<!--&lt;!&ndash;  display: none;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;/* Hide scrollbar for IE, Edge and Firefox */&ndash;&gt;-->
+<!--&lt;!&ndash;.msg_card_body {&ndash;&gt;-->
+<!--&lt;!&ndash;  -ms-overflow-style: none;  /* IE and Edge */&ndash;&gt;-->
+<!--&lt;!&ndash;  scrollbar-width: none;  /* Firefox */&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;.messages-wrapper{&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;</style>&ndash;&gt;-->

@@ -1,0 +1,133 @@
+{% extends 'base1.html' %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+    <div class="container-fluid">
+
+          <div class="card">
+            Hi, {{user.first_name}} {{user.last_name}}!
+          </div>
+          <div class="filters-card">
+<!--            <a href="#" class="filter">Filters <i class="fa-solid fa-sliders"></i></a>-->
+
+            <form method="get">
+    <div class="well">
+      <h4 style="margin-top: 0; font-size: 20px;">Filter <i class="fa-solid fa-sliders"></i></h4>
+      <div class="row">
+        <div class="form_labels">
+          {{ filter.form.profile_image.image_field }}
+          {% render_field filter.profile_image class="w3-round" %}
+        </div>
+        <div class="form_labels">
+          {{ filter.form.usernickname.label_tag }}
+          {% render_field filter.form.usernickname class="form-control" %}
+        </div>
+        <div class="form_labels">
+          {{ filter.form.interests.label_tag }}
+          {% render_field filter.form.interests class="form-control" %}
+        </div>
+        <div class="form_labels">
+          {{ filter.form.gender.label_tag }}
+          {% render_field filter.form.gender class="form-control" %}
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        <span class="glyphicon glyphicon-search"></span> Search
+      </button>
+    </div>
+  </form>
+
+  <table class="table table-bordered" style="width:100%; text-align:left">
+    <thead>
+      <tr>
+        <th>Photo</th>
+        <th>User nickname</th>
+        <th>Interests</th>
+        <th>Gender</th>
+        <th>Send Message</th>
+      </tr>
+      <hr width="100%">
+    </thead>
+    <tbody>
+      {% for user in filter.qs %}
+        <tr class="user_card">
+            {{profile_image}}
+          <td> <img src={{user.profile_image.url}} class="rounded float-right" height="100px" width="100px"> </td>
+          <td style="padding-left: 8px;">{{ user.usernickname }}</td>
+          <td style="padding-left: 8px;">{{ user.interests }}</td>
+          <td style="padding-left: 10px;">{{ user.gender }}</td>
+          <td><a class="nav-item" href="{% url 'chat' %}"><i class="fa-solid fa-comments"></i></i></a> </td>
+        </tr>
+        
+      {% empty %}
+    
+        <tr>
+          <td colspan="5" style="color: red; text-align: center; font-size: 30px;">No data</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+        </div>
+    </div>
+
+
+    <style>
+     form, table{
+      font-family: Poppins;
+    }
+
+
+    .form_labels{
+      margin: 30px;
+    } 
+
+    .btn{
+      background: linear-gradient(#9997FD, #9976C7);
+        color: #000000;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 40px 10px 40px;
+        text-align: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: 16px;
+        margin: 20px;
+        margin-left: 40%;
+        border-radius: 90px;
+        border: 0px;
+    }
+
+    .fa-solid.fa-comments{
+      color: chocolate;
+      font-size: 30px;
+      padding-left: 30px;
+    }
+    
+    .card{
+        margin: 15px;
+        padding: 50px 0px 50px 20px;
+        background: linear-gradient(#c1c0ff, #d7bcfa);
+        opacity: 1;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .filter{
+        text-decoration: none;
+        color: black;
+        
+      }
+
+      .filters-card{
+        padding: 30px;
+      }
+    </style>
+
+{% endblock %}
+

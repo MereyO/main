@@ -1,0 +1,110 @@
+{% extends 'include/header2.html' %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="nick">@{{user.username}}</div>
+
+    <div class="user_card">
+      <div class="photo">
+        <img src="{{user.profile.profile_image.url}}" class="rounded float-right" height="120px" width="120px">
+      </div>
+      <div class="name">
+        {{user.first_name}} {{user.last_name}}
+      </div>
+    </div>
+
+    <div class="intrst">
+      <strong style="padding-bottom: 6px;">Interests: </strong>
+      <div class="intbox">{{user.profile.interests}}</div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-2"></div>
+
+      <p style="font-size: 18px; font-weight: bolder; margin-left: 300px;">Profile Details</p>
+
+      <div class="details">
+        <div class="card-body">
+            <p><strong>Usernickname: </strong>{{user.profile.usernickname}}</p>
+            <p><strong>Email: </strong> {{user.email}} </p>
+            <!-- <p><strong>Bio: </strong> {{user.profile.bio}} </p> -->
+            <p><strong>Gender: </strong> {{user.profile.gender}} </p>
+            <p><strong>Phone Number: </strong> {{user.profile.phone_number}} </p>
+            <p><strong>DOB: </strong> {{user.profile.birth_date}} </p>
+            <a href="{% url 'profile-update' %}" class="btn">Update Profile</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+   
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    font-size: 14px;
+    font-family: Poppins;
+    padding: 10px 20px 30px;
+  }
+  
+  .bckgrnd {
+    height: 1117px;
+    background: linear-gradient(rgba(243,205,73,0.75), rgba(251,200,23,0.20999999344348907));
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+
+  .user_card{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+  }
+
+  .name{
+    padding: 40px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+
+  .nick{
+    font-size: 10px;
+  }
+  .intrst{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intbox{
+    padding: 10px;
+    max-width: fit-content;
+    border: 2px solid #9976C7;
+    color: #4c198f;
+    background: white;
+  }
+
+ 
+
+  .btn{
+    background: linear-gradient(#9997FD, #9976C7);
+    color: #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    margin-left: 300px;
+    border-radius: 90px;
+  }
+
+  
+</style>
+
+{% endblock content %}

@@ -1,0 +1,94 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    {% load static %}-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+    <meta charset="UTF-8"/>  
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+ <title>{% block title %}Accompl Chat Application{% endblock %}</title>
+ <script src="https://kit.fontawesome.com/1331c69528.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<!--  <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">-->
+    <!-- <link rel="stylesheet" href="{% static 'date-time-phone/jquery-ui.css' %}"> -->
+    <link rel='stylesheet' href="{% static 'date-time-phone/jquery-ui-timepicker-addon.css' %}" />
+    <!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+
+
+    <style> 
+
+    body{
+      background: linear-gradient(rgba(243,205,73,0.75), rgba(251,200,23,0.20999999344348907));
+      font-family: 'Poppins';
+      margin: 0;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .container{
+      width: 1170px;
+      margin: 0px auto;
+    }
+      #main-box {
+       
+        background: white;
+        opacity: 1;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 8px;
+        padding-bottom: 0px;
+        max-height: 590px;
+        border: 1px solid #c3c3c3;
+        margin-bottom: 45px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .navbar{
+          width: 18%;
+      }
+
+      .home{
+        margin-top: 1%;
+        margin-bottom: 1%;
+        border: 1px solid #FFF9E2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        overflow-y: scroll;
+        background: #FFF9E2;
+        width: 82%;
+        padding: 10px;
+        border-radius: 20px;
+      }
+
+
+    </style>
+    
+</head>
+<body>
+  <div class="container">
+    <div id="main-box">
+      <div class="navbar">
+        {% include 'include/navbar.html' %}
+      </div>
+      <div class="home">
+          {% block content %}  {% endblock content %}
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+
+</html>
+

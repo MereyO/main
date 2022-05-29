@@ -1,0 +1,64 @@
+
+    <div class="menu">
+      <a href="{% url 'dashboard' %}"><i class="fa-brands fa-drupal fa-2xl">Accompl</i></a>
+      <div class="navs">
+        <a class="nav-item" href="{% url 'dashboard' %}"><i class="fa-solid fa-house fa-lg"></i>  Home</a>
+        <a class="nav-item" href="{% url 'chat' %}"><i class="fa-solid fa-comment-dots fa-lg"></i>  Chat</a>
+        <a class="nav-item" href="{% url 'profile' %}"><i class="fa-solid fa-user fa-lg"></i>  Profile</a>
+        <div class="bottom">
+          <a class="nav-item" href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket fa-xl"></i>  Log out</a>
+        </div>
+
+      </div>
+    </div>
+  
+
+  <style>
+      .navs{
+        height: 100%;
+        display: flex;
+        padding-top: 20px;
+        flex-direction: column;
+        font-size: 16px;
+        
+      }
+
+      .nav-item{
+        margin: 8px;
+        color: #000000;
+        text-decoration-line: none;
+        padding-right: 40px;
+      }
+
+      .nav-item:active{
+        color: #c3c3c3;
+      }
+
+      img{
+        border-radius: 50%;
+      }
+
+      .bottom{
+        padding-top: 320px;
+      }
+
+      .fa-solid{
+        padding-right: 10px;
+      }
+
+      
+      .menu{
+        padding: 20px;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .fa-brands{
+        color:chocolate;
+        text-decoration: none;
+        padding-top: 5px;
+        padding-bottom: 20px;
+      }
+      
+  </style>

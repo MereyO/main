@@ -1,0 +1,70 @@
+<!--{% extends 'base1.html' %}-->
+
+<!--{% load widget_tweaks %}-->
+
+<!--{% block content %}-->
+
+<!--  <form method="get">-->
+<!--    <div class="well">-->
+<!--      <h4 style="margin-top: 0; font-size: 20px;">Filter <i class="fa-solid fa-sliders"></i></h4>-->
+<!--      <div class="row">-->
+<!--        <div class="form_labels">-->
+<!--          {{ filter.form.profile_image.image_field }}-->
+<!--          {% render_field filter.profile_image class="w3-round" %}-->
+<!--        </div>-->
+<!--        <div class="form_labels">-->
+<!--          {{ filter.form.usernickname.label_tag }}-->
+<!--          {% render_field filter.form.usernickname class="form-control" %}-->
+<!--        </div>-->
+<!--        <div class="form_labels">-->
+<!--          {{ filter.form.interests.label_tag }}-->
+<!--          {% render_field filter.form.interests class="form-control" %}-->
+<!--        </div>-->
+<!--        <div class="form_labels">-->
+<!--          {{ filter.form.gender.label_tag }}-->
+<!--          {% render_field filter.form.gender class="form-control" %}-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <button type="submit" class="btn btn-primary">-->
+<!--        <span class="glyphicon glyphicon-search"></span> Search-->
+<!--      </button>-->
+<!--    </div>-->
+<!--  </form>-->
+<!--  -->
+<!--  <table class="table table-bordered">-->
+<!--    <thead>-->
+<!--      <tr>-->
+<!--        <th>Photo</th>-->
+<!--        <th>User nickname</th>-->
+<!--        <th>Interests</th>-->
+<!--        <th>Gender</th>-->
+<!--      </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--      {% for user in filter.qs %}-->
+<!--        <tr>-->
+<!--            {{profile_image}}-->
+<!--          <td> <img src={{user.profile_image.url}} class="rounded float-right" height="100px" width="100px"> </td>-->
+<!--          <td>{{ user.usernickname }}</td>-->
+<!--          <td>{{ user.interests }}</td>-->
+<!--          <td>{{ user.gender }}</td>-->
+<!--        </tr>-->
+<!--      {% empty %}-->
+<!--        <tr>-->
+<!--          <td colspan="5">No data</td>-->
+<!--        </tr>-->
+<!--      {% endfor %}-->
+<!--    </tbody>-->
+<!--  </table>-->
+
+<!--  <style>-->
+<!--    form, table{-->
+<!--      padding: 15px;-->
+<!--      font-family: Poppins;-->
+<!--    }-->
+
+<!--    .form_labels{-->
+<!--      margin-bottom: 20px;-->
+<!--    }-->
+<!--  </style>-->
+<!--{% endblock %}-->

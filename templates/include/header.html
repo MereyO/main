@@ -1,0 +1,73 @@
+<div class="main">
+    <div class="search-box">
+        <input type="text" placeholder="Search">
+        <label for="" class="search-icon">
+            <i class="fas fa-search fa-lg"></i>
+        </label>
+    </div>
+    <div class="icons">
+        <a href="#" class="top-icon"><i class="fa-solid fa-bell fa-xl"></i></a>
+        <a href="#" class="top-icon"><i class="fa-solid fa-envelope fa-xl"></i></a>
+
+    </div>
+    <a class="logo" href="{% url 'profile' %}"><img src="{{user.profile.profile_image.url}}" class="rounded float-right" height="45px" width="45px"></a>
+</div>
+
+  <script>
+    const searchButton = document.getElementById('search-button');
+    const searchInput = document.getElementById('search-input');
+    searchButton.addEventListener('click', () => {
+    const inputValue = searchInput.value;
+    alert(inputValue);
+  });
+  </script>
+
+  <style>
+      .main{
+        display: flex;
+        flex-direction: row;
+        max-height: 35px;
+      }
+
+      .search-box{
+          border-radius: 20px;
+          background: #E5E5E5;
+          margin-left: 10px;
+          display: flex;
+          flex-direction: row;
+
+      }
+      
+      input{
+          padding-left: 40px;
+          padding-right: 400px;
+          font-family: 'Poppins', sans-serif;
+          background: #E5E5E5;
+          border-radius: 20px;
+          border: none;
+          font-size: 15px;
+      }
+
+      .search-icon{
+          border-radius: 20px;
+          background: #F69133;
+          padding: 27px;
+          padding-top: 7px;
+      }
+
+      .icons{
+          display: flex;
+          flex-direction: row;
+          padding-left: 10px;
+      }
+
+      .top-icon{
+          padding-top: 5px;
+          padding-left: 10px;
+          color: black;
+      }
+
+      .logo{
+          padding-right: 5px;
+      }
+  </style>
